@@ -30,7 +30,7 @@ struct ContentView: View {
                 }
                 .tag(AppView.messages)
             
-            coordinator.build(appView: .messages)
+            coordinator.build(appView: .parameters)
                 .tabItem {
                     Label("Parameters", systemImage: "gear")
                 }

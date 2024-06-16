@@ -43,37 +43,41 @@ final class CoordinatorManager: ObservableObject {
     @Published var selectedTab: AppView = .home  // Currently selected tab
     
     // MARK: - Methods
-    
-    // Navigate to a specific subview
+    /// Navigate to a specific subview
     func push(_ subView: SubView) {
         path.append(subView)
     }
     
-    // Present a full screen cover
+    /// Present a full screen cover
     func present(fullScreenCover: FullScreenCover) {
         self.fullScreenCover = fullScreenCover
     }
     
-    // Navigate back to the previous view
+    /// Navigate back to the previous view
     func navigateBack() {
-        guard !path.isEmpty else { return }
+        guard !path.isEmpty else {
+            print("Navigation Error: Path is already empty.")
+            return
+        }
         path.removeLast()
     }
     
-    // Navigate to the root view
+    /// Navigate to the root view
     func navigateToRoot() {
-        guard !path.isEmpty else { return }
+        guard !path.isEmpty else {
+            print("Navigation Error: Path is already empty.")
+            return
+        }
         path.removeLast(path.count)
     }
     
-    // Dismiss the current full screen cover
+    /// Dismiss the current full screen cover
     func dismissFullScreenCover() {
         self.fullScreenCover = nil
     }
     
     // MARK: - View Builder
-    
-    // Build views based on the selected app view
+    /// Build views based on the selected app view
     @ViewBuilder
     func build(appView: AppView) -> some View {
         switch appView {
@@ -84,7 +88,7 @@ final class CoordinatorManager: ObservableObject {
         }
     }
     
-    // Build views based on the selected subview
+    /// Build views based on the selected subview
     @ViewBuilder
     func build(subView: SubView) -> some View {
         switch subView {
@@ -99,7 +103,7 @@ final class CoordinatorManager: ObservableObject {
         }
     }
     
-    // Build views based on the selected full screen cover
+    /// Build views based on the selected full screen cover
     @ViewBuilder
     func build(fullScreenCover: FullScreenCover) -> some View {
         switch fullScreenCover {

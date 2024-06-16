@@ -25,7 +25,18 @@
 		749B42F52C1F8310007C1858 /* DisplayPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42F42C1F8310007C1858 /* DisplayPreferencesView.swift */; };
 		749B42F72C1F8318007C1858 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42F62C1F8318007C1858 /* NotificationView.swift */; };
 		749B42F92C1F8361007C1858 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42F82C1F8361007C1858 /* NewPostView.swift */; };
+		749B43012C1F893E007C1858 /* POC___CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B43002C1F893E007C1858 /* POC___CoordinatorTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		749B43022C1F893E007C1858 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 749B42B62C1F7D27007C1858 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 749B42BD2C1F7D27007C1858;
+			remoteInfo = "POC - Coordinator";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		749B42BE2C1F7D27007C1858 /* POC - Coordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POC - Coordinator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,10 +58,19 @@
 		749B42F42C1F8310007C1858 /* DisplayPreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPreferencesView.swift; sourceTree = "<group>"; };
 		749B42F62C1F8318007C1858 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		749B42F82C1F8361007C1858 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		749B42FE2C1F893E007C1858 /* POC - CoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "POC - CoordinatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		749B43002C1F893E007C1858 /* POC___CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POC___CoordinatorTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		749B42BB2C1F7D27007C1858 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		749B42FB2C1F893E007C1858 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				749B42C02C1F7D27007C1858 /* POC - Coordinator */,
+				749B42FF2C1F893E007C1858 /* POC - CoordinatorTests */,
 				749B42BF2C1F7D27007C1858 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				749B42BE2C1F7D27007C1858 /* POC - Coordinator.app */,
+				749B42FE2C1F893E007C1858 /* POC - CoordinatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,11 +137,11 @@
 		749B42D12C1F7E7C007C1858 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				749B42C32C1F7D27007C1858 /* ContentView.swift */,
 				749B42D42C1F8128007C1858 /* Home */,
 				749B42D52C1F812F007C1858 /* Profil */,
 				749B42D62C1F8134007C1858 /* Message */,
 				749B42D72C1F813B007C1858 /* Parameters */,
-				749B42C32C1F7D27007C1858 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +219,14 @@
 			path = SubView;
 			sourceTree = "<group>";
 		};
+		749B42FF2C1F893E007C1858 /* POC - CoordinatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				749B43002C1F893E007C1858 /* POC___CoordinatorTests.swift */,
+			);
+			path = "POC - CoordinatorTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,6 +247,24 @@
 			productReference = 749B42BE2C1F7D27007C1858 /* POC - Coordinator.app */;
 			productType = "com.apple.product-type.application";
 		};
+		749B42FD2C1F893E007C1858 /* POC - CoordinatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 749B43042C1F893E007C1858 /* Build configuration list for PBXNativeTarget "POC - CoordinatorTests" */;
+			buildPhases = (
+				749B42FA2C1F893E007C1858 /* Sources */,
+				749B42FB2C1F893E007C1858 /* Frameworks */,
+				749B42FC2C1F893E007C1858 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				749B43032C1F893E007C1858 /* PBXTargetDependency */,
+			);
+			name = "POC - CoordinatorTests";
+			productName = "POC - CoordinatorTests";
+			productReference = 749B42FE2C1F893E007C1858 /* POC - CoordinatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -229,6 +277,10 @@
 				TargetAttributes = {
 					749B42BD2C1F7D27007C1858 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					749B42FD2C1F893E007C1858 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 749B42BD2C1F7D27007C1858;
 					};
 				};
 			};
@@ -246,6 +298,7 @@
 			projectRoot = "";
 			targets = (
 				749B42BD2C1F7D27007C1858 /* POC - Coordinator */,
+				749B42FD2C1F893E007C1858 /* POC - CoordinatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +310,13 @@
 			files = (
 				749B42C92C1F7D28007C1858 /* Preview Assets.xcassets in Resources */,
 				749B42C62C1F7D28007C1858 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		749B42FC2C1F893E007C1858 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +346,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		749B42FA2C1F893E007C1858 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				749B43012C1F893E007C1858 /* POC___CoordinatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		749B43032C1F893E007C1858 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 749B42BD2C1F7D27007C1858 /* POC - Coordinator */;
+			targetProxy = 749B43022C1F893E007C1858 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		749B42CA2C1F7D28007C1858 /* Debug */ = {
@@ -466,6 +542,50 @@
 			};
 			name = Release;
 		};
+		749B43052C1F893E007C1858 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQM28NC327;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fxm.POC---CoordinatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/POC - Coordinator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/POC - Coordinator";
+			};
+			name = Debug;
+		};
+		749B43062C1F893E007C1858 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQM28NC327;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fxm.POC---CoordinatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/POC - Coordinator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/POC - Coordinator";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -483,6 +603,15 @@
 			buildConfigurations = (
 				749B42CD2C1F7D28007C1858 /* Debug */,
 				749B42CE2C1F7D28007C1858 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		749B43042C1F893E007C1858 /* Build configuration list for PBXNativeTarget "POC - CoordinatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				749B43052C1F893E007C1858 /* Debug */,
+				749B43062C1F893E007C1858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
