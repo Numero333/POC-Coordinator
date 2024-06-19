@@ -1,19 +1,19 @@
 //
-//  NewPostView.swift
+//  FullScrenCoverView.swift
 //  POC - Coordinator
 //
-//  Created by François-Xavier on 16/06/2024.
+//  Created by François-Xavier on 19/06/2024.
 //
 
 import SwiftUI
 
-struct NewPostView: View {
+struct FullScrenCoverView: View {
     
     @EnvironmentObject private var coordinator: CoordinatorManager
     
     var body: some View {
         VStack {
-            Text("NewPostView!")
+            Text("Full Screen Cover Presented !")
             
             Button("Dismiss fullscreen cover") {
                 coordinator.dismissFullScreenCover()
@@ -23,5 +23,5 @@ struct NewPostView: View {
 }
 
 #Preview {
-    NewPostView()
+    FullScrenCoverView()
 }

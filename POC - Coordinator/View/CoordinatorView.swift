@@ -1,16 +1,13 @@
 //
-//  ContentView.swift
+//  CoordinatorView.swift
 //  POC - Coordinator
 //
-//  Created by François-Xavier on 16/06/2024.
+//  Created by François-Xavier on 19/06/2024.
 //
 
 import SwiftUI
 
-#warning("Améliorer UI Global rapidement")
-#warning("Verification Chat gpt")
-
-struct ContentView: View {
+struct CoordinatorView: View {
     
     @EnvironmentObject private var coordinator: CoordinatorManager
     @EnvironmentObject private var appState: AppState
@@ -33,10 +30,10 @@ struct ContentView: View {
             .toolbarBackground(.visible, for: .tabBar)
         }
         .fullScreenCover(item: $coordinator.fullScreenCover) { fullScreenCover in
-            coordinator.build(fullScreenCover: .newPost)
+            coordinator.build(fullScreenCover: fullScreenCover)
         }
         .sheet(item: $coordinator.halfScreenSheet) { halfScreenSheet in
-            coordinator.build(halfScreenSheet: .preferenceView)
+            coordinator.build(halfScreenSheet: halfScreenSheet)
                 .presentationDetents([.fraction(0.5)])
         }
         .alert("Error", isPresented: $coordinator.alertIsPresented, actions: {
@@ -56,5 +53,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    CoordinatorView()
 }

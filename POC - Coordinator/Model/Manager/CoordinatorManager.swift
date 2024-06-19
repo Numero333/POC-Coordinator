@@ -7,11 +7,9 @@
 
 import SwiftUI
 
-import SwiftUI
-
 // MARK: - App View Enum
 enum AppView: String, Identifiable, CaseIterable {
-    case home, profile, messages, alert
+    case home, navigate, modal, alert
     
     var id: String {
         self.rawValue
@@ -22,9 +20,9 @@ enum AppView: String, Identifiable, CaseIterable {
         switch self {
         case .home:
             return "Home"
-        case .profile:
+        case .navigate:
             return "Navigate"
-        case .messages:
+        case .modal:
             return "Modal"
         case .alert:
             return "Alert"
@@ -36,9 +34,9 @@ enum AppView: String, Identifiable, CaseIterable {
         switch self {
         case .home:
             return "house"
-        case .profile:
+        case .navigate:
             return "rectangle.portrait.and.arrow.right.fill"
-        case .messages:
+        case .modal:
             return "square.stack.fill"
         case .alert:
             return "exclamationmark.triangle"
@@ -48,7 +46,7 @@ enum AppView: String, Identifiable, CaseIterable {
 
 // MARK: - Sub View Enum
 enum SubView: String, Identifiable {
-    case news, recommendation, information, history, lastChat, contact, notifications, displayPreferences, parameters
+    case notifications, displayPreferences, parameters
     
     var id: String {
         self.rawValue
@@ -57,7 +55,7 @@ enum SubView: String, Identifiable {
 
 // MARK: - Full Screen Cover Enum
 enum FullScreenCover: String, Identifiable {
-    case newPost
+    case fullSreenCover
     
     var id: String {
         self.rawValue
@@ -143,8 +141,8 @@ final class CoordinatorManager: ObservableObject {
     func build(appView: AppView) -> some View {
         switch appView {
         case .home: HomeView()
-        case .profile: ProfileView()
-        case .messages: MessageView()
+        case .navigate: NavigateView()
+        case .modal: ModalView()
         case .alert: AlertView()
         }
     }
@@ -153,12 +151,6 @@ final class CoordinatorManager: ObservableObject {
     @ViewBuilder
     func build(subView: SubView) -> some View {
         switch subView {
-        case .news: NewsView()
-        case .recommendation: RecommendationView()
-        case .information: InformationView()
-        case .history: HistoryView()
-        case .lastChat: LastChatsView()
-        case .contact: ContactView()
         case .notifications: NotificationView()
         case .displayPreferences: DisplayPreferencesView()
         case .parameters: ParametersView()
@@ -169,7 +161,7 @@ final class CoordinatorManager: ObservableObject {
     @ViewBuilder
     func build(fullScreenCover: FullScreenCover) -> some View {
         switch fullScreenCover {
-        case .newPost: NewPostView()
+        case .fullSreenCover: FullScrenCoverView()
         }
     }
     

@@ -26,26 +26,26 @@ class CoordinatorManagerTests: XCTestCase {
 //    }
     
     func testNavigateBack() {
-        coordinator.push(.news)
+        coordinator.push(.parameters)
         coordinator.navigateBack()
         XCTAssertTrue(coordinator.path.isEmpty)
     }
     
     func testNavigateToRoot() {
-        coordinator.push(.news)
-        coordinator.push(.history)
+        coordinator.push(.parameters)
+        coordinator.push(.notifications)
         coordinator.navigateToRoot()
         XCTAssertTrue(coordinator.path.isEmpty)
     }
     
     func testPresentFullScreenCover() {
-        coordinator.present(fullScreenCover: .newPost)
+        coordinator.present(fullScreenCover: .fullSreenCover)
         XCTAssertNotNil(coordinator.fullScreenCover)
-        XCTAssertEqual(coordinator.fullScreenCover, .newPost)
+        XCTAssertEqual(coordinator.fullScreenCover, .fullSreenCover)
     }
     
     func testDismissFullScreenCover() {
-        coordinator.present(fullScreenCover: .newPost)
+        coordinator.present(fullScreenCover: .fullSreenCover)
         coordinator.dismissFullScreenCover()
         XCTAssertNil(coordinator.fullScreenCover)
     }

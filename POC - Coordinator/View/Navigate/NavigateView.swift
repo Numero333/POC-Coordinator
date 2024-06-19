@@ -1,13 +1,13 @@
 //
-//  ProfileView.swift
+//  NavigateView.swift
 //  POC - Coordinator
 //
-//  Created by François-Xavier on 16/06/2024.
+//  Created by François-Xavier on 19/06/2024.
 //
 
 import SwiftUI
 
-struct ProfileView: View {
+struct NavigateView: View {
     
     @EnvironmentObject private var coordinator: CoordinatorManager
     
@@ -22,7 +22,7 @@ struct ProfileView: View {
         .font(.title3)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.orange.opacity(0.6))
-        .navigationTitle("Profile")
+        .navigationTitle("Navigate")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -37,5 +37,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    NavigateView()
 }

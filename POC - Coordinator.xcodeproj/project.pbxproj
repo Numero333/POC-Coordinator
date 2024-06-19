@@ -7,26 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7465D4F82C23536600EA6CE7 /* NavigateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7465D4F72C23536600EA6CE7 /* NavigateView.swift */; };
 		749B42C22C1F7D27007C1858 /* POC___CoordinatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42C12C1F7D27007C1858 /* POC___CoordinatorApp.swift */; };
-		749B42C42C1F7D27007C1858 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42C32C1F7D27007C1858 /* ContentView.swift */; };
 		749B42C62C1F7D28007C1858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 749B42C52C1F7D28007C1858 /* Assets.xcassets */; };
 		749B42C92C1F7D28007C1858 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 749B42C82C1F7D28007C1858 /* Preview Assets.xcassets */; };
 		749B42D32C1F7EB4007C1858 /* CoordinatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42D22C1F7EB4007C1858 /* CoordinatorManager.swift */; };
 		749B42D92C1F8177007C1858 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42D82C1F8177007C1858 /* HomeView.swift */; };
-		749B42DB2C1F81AA007C1858 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42DA2C1F81AA007C1858 /* ProfileView.swift */; };
-		749B42DD2C1F81BE007C1858 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42DC2C1F81BE007C1858 /* MessageView.swift */; };
 		749B42DF2C1F81C5007C1858 /* ParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42DE2C1F81C5007C1858 /* ParametersView.swift */; };
-		749B42E22C1F826D007C1858 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42E12C1F826D007C1858 /* NewsView.swift */; };
-		749B42E62C1F82A3007C1858 /* RecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42E52C1F82A3007C1858 /* RecommendationView.swift */; };
-		749B42EB2C1F82D7007C1858 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42EA2C1F82D7007C1858 /* InformationView.swift */; };
-		749B42ED2C1F82E3007C1858 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42EC2C1F82E3007C1858 /* HistoryView.swift */; };
-		749B42EF2C1F82EC007C1858 /* LastChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42EE2C1F82EC007C1858 /* LastChatsView.swift */; };
-		749B42F32C1F82FF007C1858 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42F22C1F82FF007C1858 /* ContactView.swift */; };
 		749B42F52C1F8310007C1858 /* DisplayPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42F42C1F8310007C1858 /* DisplayPreferencesView.swift */; };
 		749B42F72C1F8318007C1858 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42F62C1F8318007C1858 /* NotificationView.swift */; };
-		749B42F92C1F8361007C1858 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42F82C1F8361007C1858 /* NewPostView.swift */; };
 		749B43012C1F893E007C1858 /* POC___CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B43002C1F893E007C1858 /* POC___CoordinatorTests.swift */; };
 		749C5F362C21E7AD00897B32 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749C5F352C21E7AD00897B32 /* AlertView.swift */; };
+		749C5F392C234E9400897B32 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749C5F382C234E9400897B32 /* ModalView.swift */; };
+		749C5F3C2C23504000897B32 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749C5F3B2C23504000897B32 /* CoordinatorView.swift */; };
+		749C5F3E2C2350E800897B32 /* FullScrenCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749C5F3D2C2350E800897B32 /* FullScrenCoverView.swift */; };
 		74D5C9A12C20CB9C00D6B6D1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D5C9A02C20CB9C00D6B6D1 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,28 +35,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7465D4F72C23536600EA6CE7 /* NavigateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateView.swift; sourceTree = "<group>"; };
 		749B42BE2C1F7D27007C1858 /* POC - Coordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POC - Coordinator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		749B42C12C1F7D27007C1858 /* POC___CoordinatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POC___CoordinatorApp.swift"; sourceTree = "<group>"; };
-		749B42C32C1F7D27007C1858 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		749B42C52C1F7D28007C1858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		749B42C82C1F7D28007C1858 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		749B42D22C1F7EB4007C1858 /* CoordinatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorManager.swift; sourceTree = "<group>"; };
 		749B42D82C1F8177007C1858 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		749B42DA2C1F81AA007C1858 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		749B42DC2C1F81BE007C1858 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		749B42DE2C1F81C5007C1858 /* ParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersView.swift; sourceTree = "<group>"; };
-		749B42E12C1F826D007C1858 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
-		749B42E52C1F82A3007C1858 /* RecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationView.swift; sourceTree = "<group>"; };
-		749B42EA2C1F82D7007C1858 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
-		749B42EC2C1F82E3007C1858 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
-		749B42EE2C1F82EC007C1858 /* LastChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastChatsView.swift; sourceTree = "<group>"; };
-		749B42F22C1F82FF007C1858 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		749B42F42C1F8310007C1858 /* DisplayPreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPreferencesView.swift; sourceTree = "<group>"; };
 		749B42F62C1F8318007C1858 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		749B42F82C1F8361007C1858 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		749B42FE2C1F893E007C1858 /* POC - CoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "POC - CoordinatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		749B43002C1F893E007C1858 /* POC___CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POC___CoordinatorTests.swift"; sourceTree = "<group>"; };
 		749C5F352C21E7AD00897B32 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		749C5F382C234E9400897B32 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		749C5F3B2C23504000897B32 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		749C5F3D2C2350E800897B32 /* FullScrenCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScrenCoverView.swift; sourceTree = "<group>"; };
 		74D5C9A02C20CB9C00D6B6D1 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,10 +129,10 @@
 		749B42D12C1F7E7C007C1858 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				749B42C32C1F7D27007C1858 /* ContentView.swift */,
+				749C5F3B2C23504000897B32 /* CoordinatorView.swift */,
+				749C5F372C234E8800897B32 /* Modal */,
 				749B42D42C1F8128007C1858 /* Home */,
-				749B42D52C1F812F007C1858 /* Profil */,
-				749B42D62C1F8134007C1858 /* Message */,
+				749B42D52C1F812F007C1858 /* Navigate */,
 				749C5F322C21E79400897B32 /* Alert */,
 				749B42D72C1F813B007C1858 /* Parameters */,
 			);
@@ -155,70 +143,30 @@
 			isa = PBXGroup;
 			children = (
 				749B42D82C1F8177007C1858 /* HomeView.swift */,
-				749B42E02C1F8252007C1858 /* SubView */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		749B42D52C1F812F007C1858 /* Profil */ = {
+		749B42D52C1F812F007C1858 /* Navigate */ = {
 			isa = PBXGroup;
 			children = (
-				749B42DA2C1F81AA007C1858 /* ProfileView.swift */,
-				749B42E72C1F82B1007C1858 /* SubView */,
+				7465D4F72C23536600EA6CE7 /* NavigateView.swift */,
+				749B42E92C1F82C0007C1858 /* SubView */,
 			);
-			path = Profil;
-			sourceTree = "<group>";
-		};
-		749B42D62C1F8134007C1858 /* Message */ = {
-			isa = PBXGroup;
-			children = (
-				749B42DC2C1F81BE007C1858 /* MessageView.swift */,
-				749B42E82C1F82BD007C1858 /* SubView */,
-			);
-			path = Message;
+			path = Navigate;
 			sourceTree = "<group>";
 		};
 		749B42D72C1F813B007C1858 /* Parameters */ = {
 			isa = PBXGroup;
 			children = (
-				749B42DE2C1F81C5007C1858 /* ParametersView.swift */,
-				749B42E92C1F82C0007C1858 /* SubView */,
 			);
 			path = Parameters;
-			sourceTree = "<group>";
-		};
-		749B42E02C1F8252007C1858 /* SubView */ = {
-			isa = PBXGroup;
-			children = (
-				749B42E12C1F826D007C1858 /* NewsView.swift */,
-				749B42E52C1F82A3007C1858 /* RecommendationView.swift */,
-				749B42F82C1F8361007C1858 /* NewPostView.swift */,
-			);
-			path = SubView;
-			sourceTree = "<group>";
-		};
-		749B42E72C1F82B1007C1858 /* SubView */ = {
-			isa = PBXGroup;
-			children = (
-				749B42EA2C1F82D7007C1858 /* InformationView.swift */,
-				749B42EC2C1F82E3007C1858 /* HistoryView.swift */,
-			);
-			path = SubView;
-			sourceTree = "<group>";
-		};
-		749B42E82C1F82BD007C1858 /* SubView */ = {
-			isa = PBXGroup;
-			children = (
-				749B42EE2C1F82EC007C1858 /* LastChatsView.swift */,
-				749B42F22C1F82FF007C1858 /* ContactView.swift */,
-			);
-			path = SubView;
 			sourceTree = "<group>";
 		};
 		749B42E92C1F82C0007C1858 /* SubView */ = {
 			isa = PBXGroup;
 			children = (
-				749B42F42C1F8310007C1858 /* DisplayPreferencesView.swift */,
+				749B42DE2C1F81C5007C1858 /* ParametersView.swift */,
 				749B42F62C1F8318007C1858 /* NotificationView.swift */,
 			);
 			path = SubView;
@@ -238,6 +186,24 @@
 				749C5F352C21E7AD00897B32 /* AlertView.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		749C5F372C234E8800897B32 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				749C5F382C234E9400897B32 /* ModalView.swift */,
+				749C5F3A2C234E9C00897B32 /* SubView */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		749C5F3A2C234E9C00897B32 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				749B42F42C1F8310007C1858 /* DisplayPreferencesView.swift */,
+				749C5F3D2C2350E800897B32 /* FullScrenCoverView.swift */,
+			);
+			path = SubView;
 			sourceTree = "<group>";
 		};
 		74D5C99F2C20CB9300D6B6D1 /* Model */ = {
@@ -349,23 +315,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				749B42DD2C1F81BE007C1858 /* MessageView.swift in Sources */,
-				749B42E22C1F826D007C1858 /* NewsView.swift in Sources */,
 				749B42D32C1F7EB4007C1858 /* CoordinatorManager.swift in Sources */,
 				749B42D92C1F8177007C1858 /* HomeView.swift in Sources */,
-				749B42F32C1F82FF007C1858 /* ContactView.swift in Sources */,
-				749B42EF2C1F82EC007C1858 /* LastChatsView.swift in Sources */,
 				74D5C9A12C20CB9C00D6B6D1 /* AppState.swift in Sources */,
-				749B42DB2C1F81AA007C1858 /* ProfileView.swift in Sources */,
-				749B42F92C1F8361007C1858 /* NewPostView.swift in Sources */,
-				749B42ED2C1F82E3007C1858 /* HistoryView.swift in Sources */,
-				749B42EB2C1F82D7007C1858 /* InformationView.swift in Sources */,
+				749C5F392C234E9400897B32 /* ModalView.swift in Sources */,
 				749C5F362C21E7AD00897B32 /* AlertView.swift in Sources */,
 				749B42DF2C1F81C5007C1858 /* ParametersView.swift in Sources */,
-				749B42C42C1F7D27007C1858 /* ContentView.swift in Sources */,
+				749C5F3C2C23504000897B32 /* CoordinatorView.swift in Sources */,
 				749B42C22C1F7D27007C1858 /* POC___CoordinatorApp.swift in Sources */,
+				749C5F3E2C2350E800897B32 /* FullScrenCoverView.swift in Sources */,
 				749B42F52C1F8310007C1858 /* DisplayPreferencesView.swift in Sources */,
-				749B42E62C1F82A3007C1858 /* RecommendationView.swift in Sources */,
+				7465D4F82C23536600EA6CE7 /* NavigateView.swift in Sources */,
 				749B42F72C1F8318007C1858 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,7 +15,7 @@ struct POC__CoordinatorApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CoordinatorView()
                 .preferredColorScheme(appState.preferedColorScheme)
                 .environmentObject(coordinator)
                 .environmentObject(appState)
