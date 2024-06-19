@@ -7,27 +7,66 @@
 
 import SwiftUI
 
-// MARK: - Base View
-enum AppView: String, Identifiable {
-    case home, profile, messages, parameters
+import SwiftUI
+
+// MARK: - App View Enum
+enum AppView: String, Identifiable, CaseIterable {
+    case home, profile, messages, alert
     
     var id: String {
         self.rawValue
     }
+    
+    /// Title for the tab
+    var title: String {
+        switch self {
+        case .home:
+            return "Home"
+        case .profile:
+            return "Navigate"
+        case .messages:
+            return "Modal"
+        case .alert:
+            return "Alert"
+        }
+    }
+    
+    /// System image name for the tab
+    var image: String {
+        switch self {
+        case .home:
+            return "house"
+        case .profile:
+            return "rectangle.portrait.and.arrow.right.fill"
+        case .messages:
+            return "square.stack.fill"
+        case .alert:
+            return "exclamationmark.triangle"
+        }
+    }
 }
 
-// MARK: - Sub View
+// MARK: - Sub View Enum
 enum SubView: String, Identifiable {
-    case news, recommendation, information, history, lastChat, contact, notifications, displayPreferences
+    case news, recommendation, information, history, lastChat, contact, notifications, displayPreferences, parameters
     
     var id: String {
         self.rawValue
     }
 }
 
-// MARK: - FullScreenCover View
+// MARK: - Full Screen Cover Enum
 enum FullScreenCover: String, Identifiable {
     case newPost
+    
+    var id: String {
+        self.rawValue
+    }
+}
+
+// MARK: - Half Screen Sheet Enum
+enum HalfScreenSheet: String, Identifiable {
+    case preferenceView
     
     var id: String {
         self.rawValue
@@ -39,8 +78,10 @@ final class CoordinatorManager: ObservableObject {
     
     // MARK: Properties
     @Published var path = NavigationPath()  // Keeps track of the navigation stack
-    @Published var fullScreenCover: FullScreenCover?  // Current full screen cover
+    @Published var halfScreenSheet: HalfScreenSheet?
+    @Published var fullScreenCover: FullScreenCover?  // Currently displayed full screen cover
     @Published var selectedTab: AppView = .home  // Currently selected tab
+    @Published var alertIsPresented = false
     
     // MARK: - Methods
     /// Navigate to a specific subview
@@ -51,6 +92,16 @@ final class CoordinatorManager: ObservableObject {
     /// Present a full screen cover
     func present(fullScreenCover: FullScreenCover) {
         self.fullScreenCover = fullScreenCover
+    }
+    
+    /// Present a half screen sheet
+    func present(halfScreenSheet: HalfScreenSheet) {
+        self.halfScreenSheet = halfScreenSheet
+    }
+    
+    /// Present an alert for an error
+    func presentAlert() {
+        self.alertIsPresented = true
     }
     
     /// Navigate back to the previous view
@@ -76,6 +127,16 @@ final class CoordinatorManager: ObservableObject {
         self.fullScreenCover = nil
     }
     
+    /// Dismiss the current half screen sheet
+    func dismissSheet() {
+        self.halfScreenSheet = nil
+    }
+    
+    /// Dismiss the current alert
+    func dismissAlert() {
+        self.alertIsPresented = false
+    }
+    
     // MARK: - View Builder
     /// Build views based on the selected app view
     @ViewBuilder
@@ -84,7 +145,7 @@ final class CoordinatorManager: ObservableObject {
         case .home: HomeView()
         case .profile: ProfileView()
         case .messages: MessageView()
-        case .parameters: ParametersView()
+        case .alert: AlertView()
         }
     }
     
@@ -100,6 +161,7 @@ final class CoordinatorManager: ObservableObject {
         case .contact: ContactView()
         case .notifications: NotificationView()
         case .displayPreferences: DisplayPreferencesView()
+        case .parameters: ParametersView()
         }
     }
     
@@ -108,6 +170,14 @@ final class CoordinatorManager: ObservableObject {
     func build(fullScreenCover: FullScreenCover) -> some View {
         switch fullScreenCover {
         case .newPost: NewPostView()
+        }
+    }
+    
+    /// Build views based on the selected half screen sheet
+    @ViewBuilder
+    func build(halfScreenSheet: HalfScreenSheet) -> some View {
+        switch halfScreenSheet {
+        case .preferenceView: DisplayPreferencesView()
         }
     }
 }

@@ -26,6 +26,8 @@
 		749B42F72C1F8318007C1858 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42F62C1F8318007C1858 /* NotificationView.swift */; };
 		749B42F92C1F8361007C1858 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B42F82C1F8361007C1858 /* NewPostView.swift */; };
 		749B43012C1F893E007C1858 /* POC___CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B43002C1F893E007C1858 /* POC___CoordinatorTests.swift */; };
+		749C5F362C21E7AD00897B32 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749C5F352C21E7AD00897B32 /* AlertView.swift */; };
+		74D5C9A12C20CB9C00D6B6D1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D5C9A02C20CB9C00D6B6D1 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		749B42F82C1F8361007C1858 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		749B42FE2C1F893E007C1858 /* POC - CoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "POC - CoordinatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		749B43002C1F893E007C1858 /* POC___CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POC___CoordinatorTests.swift"; sourceTree = "<group>"; };
+		749C5F352C21E7AD00897B32 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		74D5C9A02C20CB9C00D6B6D1 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +105,8 @@
 		749B42C02C1F7D27007C1858 /* POC - Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				74D5C99F2C20CB9300D6B6D1 /* Model */,
 				749B42D02C1F7E6E007C1858 /* ApplicationLifeCycle */,
-				749B42CF2C1F7E64007C1858 /* Manager */,
 				749B42D12C1F7E7C007C1858 /* View */,
 				749B42C52C1F7D28007C1858 /* Assets.xcassets */,
 				749B42C72C1F7D28007C1858 /* Preview Content */,
@@ -141,6 +145,7 @@
 				749B42D42C1F8128007C1858 /* Home */,
 				749B42D52C1F812F007C1858 /* Profil */,
 				749B42D62C1F8134007C1858 /* Message */,
+				749C5F322C21E79400897B32 /* Alert */,
 				749B42D72C1F813B007C1858 /* Parameters */,
 			);
 			path = View;
@@ -225,6 +230,23 @@
 				749B43002C1F893E007C1858 /* POC___CoordinatorTests.swift */,
 			);
 			path = "POC - CoordinatorTests";
+			sourceTree = "<group>";
+		};
+		749C5F322C21E79400897B32 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				749C5F352C21E7AD00897B32 /* AlertView.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		74D5C99F2C20CB9300D6B6D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				749B42CF2C1F7E64007C1858 /* Manager */,
+				74D5C9A02C20CB9C00D6B6D1 /* AppState.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,10 +355,12 @@
 				749B42D92C1F8177007C1858 /* HomeView.swift in Sources */,
 				749B42F32C1F82FF007C1858 /* ContactView.swift in Sources */,
 				749B42EF2C1F82EC007C1858 /* LastChatsView.swift in Sources */,
+				74D5C9A12C20CB9C00D6B6D1 /* AppState.swift in Sources */,
 				749B42DB2C1F81AA007C1858 /* ProfileView.swift in Sources */,
 				749B42F92C1F8361007C1858 /* NewPostView.swift in Sources */,
 				749B42ED2C1F82E3007C1858 /* HistoryView.swift in Sources */,
 				749B42EB2C1F82D7007C1858 /* InformationView.swift in Sources */,
+				749C5F362C21E7AD00897B32 /* AlertView.swift in Sources */,
 				749B42DF2C1F81C5007C1858 /* ParametersView.swift in Sources */,
 				749B42C42C1F7D27007C1858 /* ContentView.swift in Sources */,
 				749B42C22C1F7D27007C1858 /* POC___CoordinatorApp.swift in Sources */,

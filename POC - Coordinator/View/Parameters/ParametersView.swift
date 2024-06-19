@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct ParametersView: View {
+    
+    @EnvironmentObject private var appState: AppState
+    @EnvironmentObject private var coordinator: CoordinatorManager
+    
     var body: some View {
-        Text("ParametersView!")
+        VStack {
+            Button {
+                coordinator.push(.notifications)
+            } label: {
+                Text("Notification View")
+            }
+            .buttonStyle(.borderedProminent)
+        }
+        
+        .navigationTitle("Parameters")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

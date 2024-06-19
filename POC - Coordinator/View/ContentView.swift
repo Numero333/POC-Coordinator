@@ -7,37 +7,50 @@
 
 import SwiftUI
 
+#warning("Améliorer UI Global rapidement")
+#warning("Verification Chat gpt")
+
 struct ContentView: View {
-    @StateObject private var coordinator = CoordinatorManager()
+    
+    @EnvironmentObject private var coordinator: CoordinatorManager
+    @EnvironmentObject private var appState: AppState
     
     var body: some View {
         TabView(selection: $coordinator.selectedTab) {
-            coordinator.build(appView: .home)
-                .tabItem {
-                    Label("Home", systemImage: "house")
+            ForEach(AppView.allCases, id: \.self) { tab in
+                NavigationStack(path: $coordinator.path) {
+                    coordinator.build(appView: tab)
+                        .navigationDestination(for: SubView.self) { subView in
+                            coordinator.build(subView: subView)
+                        }
                 }
-                .tag(AppView.home)
-            
-            coordinator.build(appView: .profile)
                 .tabItem {
-                    Label("Profile", systemImage: "person")
+                    Label(tab.title, systemImage: tab.image)
                 }
-                .tag(AppView.profile)
-            
-            coordinator.build(appView: .messages)
-                .tabItem {
-                    Label("Messages", systemImage: "message")
-                }
-                .tag(AppView.messages)
-            
-            coordinator.build(appView: .parameters)
-                .tabItem {
-                    Label("Parameters", systemImage: "gear")
-                }
-                .tag(AppView.parameters)
+                .tag(tab.id)
+            }
+            .toolbarBackground(.ultraThinMaterial, for: .tabBar)
+            .toolbarBackground(.visible, for: .tabBar)
         }
         .fullScreenCover(item: $coordinator.fullScreenCover) { fullScreenCover in
             coordinator.build(fullScreenCover: .newPost)
+        }
+        .sheet(item: $coordinator.halfScreenSheet) { halfScreenSheet in
+            coordinator.build(halfScreenSheet: .preferenceView)
+                .presentationDetents([.fraction(0.5)])
+        }
+        .alert("Error", isPresented: $coordinator.alertIsPresented, actions: {
+            Button("OK") {
+                coordinator.dismissAlert()
+                appState.resetError()
+            }
+        }, message: {
+            Text(appState.errorMessage)
+        })
+        .onChange(of: appState.errorMessage) {
+            if !appState.errorMessage.isEmpty {
+                coordinator.presentAlert()
+            }
         }
     }
 }

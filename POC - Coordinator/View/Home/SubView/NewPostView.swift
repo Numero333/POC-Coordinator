@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct NewPostView: View {
+    
+    @EnvironmentObject private var coordinator: CoordinatorManager
+    
     var body: some View {
-        Text("NewPostView")
+        VStack {
+            Text("NewPostView!")
+            
+            Button("Dismiss fullscreen cover") {
+                coordinator.dismissFullScreenCover()
+            }
+        }
     }
 }
 
